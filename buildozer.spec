@@ -19,7 +19,7 @@ source.include_exts = py,png,jpg,kv,atlas, ttf,txt
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
-source.include_patterns = missal/*.txt
+#source.include_patterns = missal/*.txt
 source.include_patterns = app_missal/*.png
 
 # (list) Source files to exclude (let empty to not exclude anything)
