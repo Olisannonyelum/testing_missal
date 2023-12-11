@@ -39,7 +39,7 @@ class Test(MDApp):
     #select_date
     missal=StringProperty("")
     def selec_date(self,instance,value,date_range):
-        print("---->",str(value))
+        #print("---->",str(value))
         try:
             self.path=str(f'missal\\{value}.txt')
             #self.file=open("C:\\Users\\Nnonyelume\\Desktop\\clone\\R@1n.txt")
