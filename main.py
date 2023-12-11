@@ -14,8 +14,9 @@ from kivy.metrics import dp
 from kivy.properties import StringProperty
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.button import MDFlatButton
+from kivy.resources import resource_find
 
-#Window.size=(dp(440),dp(600))
+Window.size=(dp(440),dp(600))
 
 #Builder.load_file("mymd.kv")
 
@@ -41,17 +42,22 @@ class Test(MDApp):
     def selec_date(self,instance,value,date_range):
         #print("---->",str(value))
         try:
-            self.path=(f'missal\\{value}.txt')
+            self.filename=f'missal\\{value}.txt'
             #self.file=open("C:\\Users\\Nnonyelume\\Desktop\\clone\\R@1n.txt")
             #print(self.path)
-            self.file=open(self.path,"r",encoding="ISO-8859-1")
-            self.missal=self.file.read()
-            self.root.ids.Missal.text= self.path  #self.missal
-            #print(self.missal)
-            self.file.close()
-            #print(missal)
+            self.path= resource_find(self.filename)
+            if self.path:
+                with open(self.path,"r",encoding="ISO-8859-1") as file:
+                    self.missal = file.read()
+                    self.root.ids.Missal.text=self.missal
+            else:
+                self.dialog_open()
+                
+
+            
         except FileNotFoundError:
-            self.dialog_open()  #<-------------------------------------------------------------------------------------
+            pass
+              #<-------------------------------------------------------------------------------------
          #   print("No such file or directory")
         #print(f'missal\\{value}.txt')
         
