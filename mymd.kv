@@ -30,7 +30,7 @@ ScreenManager:
 
                 MDGridLayout:
                     size_hint:1,None
-                    height:1000
+                    height:2000        #incress the hight 
                     adaptive_height:True
                     #orientation:"vertical"
                     cols:2
@@ -38,195 +38,154 @@ ScreenManager:
                     adaptive_height:False
                     adaptive_widght:False
                 #BoxLayout:
-                    spacing:"5dp"
+                    spacing:"10dp"
                 #    orientation:"vertical"
-                    padding: 1
+                    padding: 7
                     md_bg_color: "white"
 
-                    MDCard:
-                        elevation:0
-                        padding: 4
-                        size_hint:1,1
-                        #size: "200dp", "100dp"
-                        md_bg_color:"white"
-                        pos_hint: {"center_x": .5, "center_y": .5}
-                        adaptive_size: True
+ #                   MDCard:
+  #                      elevation:0
+   #                     padding: 4
+    #                    size_hint:1,1
+     #                   #size: "200dp", "100dp"
+      #                  md_bg_color:"white"
+       #                 pos_hint: {"center_x": .5, "center_y": .5}
+        #                adaptive_size: True
 
                                 
-                        MDRaisedButton:
-                            elevation:0
-                            size_hint:1,1
-                            text: "Date"
-                            pos_hint: {"center_x": .5,"center_y": .5}
-                            #y:"36dp"  
-                            #user_font_size:"500sp"
-                            #size:"200dp","200dp"     
-                            #height:self.parent.height
-                            #width:'200dp'
-                            #icon:"Annotation 2023-11-19 065943.png"
-                            #size_hint:1,1
-                            #adaptive_size: True
-                            on_press:
-                                app.date()
-                                root.current = "screen B"
-                                root.transition.direction="left"
+                    MDRaisedButton:
+                        elevation:0
+                        size_hint:1,1
+                        text: "Date"
+                        pos_hint: {"center_x": .5,"center_y": .5}
+                        #y:"36dp"  
+                        #user_font_size:"500sp"
+                        #size:"200dp","200dp"     
+                        #height:self.parent.height
+                        #width:'200dp'
+                        #icon:"Annotation 2023-11-19 065943.png"
+                        #size_hint:1,1
+                        #adaptive_size: True
+                        on_press:
+                            app.date()
+                            root.current = "screen B"
+                            root.transition.direction="left"
 
-                            Image:
-                                allow_stretch:True
-                                keep_ratio:False
-                                source: "app_image//bible 1.png"
-                                size_hint:None,None
-                                height:self.parent.height
-                                width:self.parent.width
+                        Image:
+                            allow_stretch:True
+                            keep_ratio:False
+                            source: "app_image//bible 1.png"
+                            size_hint:None,None
+                            height:self.parent.height
+                            width:self.parent.width
 
                                 
                                 
                             
-                    MDCard:
-                        adaptive_size: True
-                        elevation:0
-                        padding: 4
-                        size_hint:1,1
-                        #size: "200dp", "100dp"
-                        md_bg_color:"white"
-                        pos_hint: {"center_x": .5, "center_y": .5}
+#                    MDCard:
+ #                       adaptive_size: True
+  #                      elevation:0
+   #                     padding: 4
+    #                    size_hint:1,1
+     #                   #size: "200dp", "100dp"
+      #                  md_bg_color:"white"
+       #                 pos_hint: {"center_x": .5, "center_y": .5}
                         
                         
 
-                        MDRaisedButton:
-                            
-                            elevation:0
-                            size_hint:1,1
-                            text: "Date"
-                            pos_hint: {"center_x": .5,"center_y": .5}
-                            
-                            on_press:
-                                root.current = "screen c"
-                                root.transition.direction="left"
+                    MDRaisedButton:
+                        
+                        elevation:0
+                        size_hint:1,1
+                        text: "Date"
+                        pos_hint: {"center_x": .5,"center_y": .5}
+                        
+                        on_press:
+                            root.current = "screen c"
+                            root.transition.direction="left"
 
-                            Image:
-                                allow_stretch:True
-                                keep_ratio:False
-                                source:"app_image//5ab887a3365592adfc142477a4949c70.png"
-                                size_hint:None,None
-                                height:self.parent.height
-                                width:self.parent.width
+                        Image:
+                            allow_stretch:True
+                            keep_ratio:False
+                            source:"app_image//5ab887a3365592adfc142477a4949c70.png"
+                            size_hint:None,None
+                            height:self.parent.height
+                            width:self.parent.width
                     
 
-                    MDCard:
-                        padding: 4
+#                    MDCard:
+ #                       padding: 4
+  #                      elevation:0
+   #                     size_hint:1,1
+    #                    #size: "200dp", "100dp"
+     #                   md_bg_color:"white"
+      #                  pos_hint: {"center_x": .5, "center_y": .5}
+       #                 adaptive_size: True
+
+                    MDRaisedButton:
+                        elevation:0
+                        text:"testing"
+                        size_hint:1,1
+                        on_press:app.testing()
+
+
+
+                    
+
+                    MDRaisedButton:
+                        elevation:0
+                        text:"here"
+                        size_hint:1,1
+                        on_press:app.dialog_open()
+
+
+
+                    
+
+                    MDRaisedButton:
                         elevation:0
                         size_hint:1,1
-                        #size: "200dp", "100dp"
-                        md_bg_color:"white"
-                        pos_hint: {"center_x": .5, "center_y": .5}
-                        adaptive_size: True
-
-                        MDRaisedButton:
-                            text:"testing"
-                            size_hint:1,1
-                            on_press:app.testing()
+                        on_press:app.dialog_open()
 
 
+                    
 
-                    MDCard:
-                        padding: 4
+                    MDRaisedButton:
                         elevation:0
                         size_hint:1,1
-                        #size: "200dp", "100dp"
-                        md_bg_color:"white"
-                        pos_hint: {"center_x": .5, "center_y": .5}
-                        adaptive_size: True
-
-                        MDRaisedButton:
-                            text:"here"
-                            size_hint:1,1
-                            on_press:app.dialog_open()
+                        on_press:app.dialog_open()
 
 
+                    
 
-                    MDCard:
+                    MDRaisedButton:
                         elevation:0
-                        padding: 4
                         size_hint:1,1
-                        #size: "200dp", "100dp"
-                        md_bg_color:"white"
-                        pos_hint: {"center_x": .5, "center_y": .5}
-                        adaptive_size: True
-
-                        MDRaisedButton:
-                            size_hint:1,1
-                            on_press:app.dialog_open()
+                        on_press:app.dialog_open()
 
 
-                    MDCard:
+                    
+
+                    MDRaisedButton:
                         elevation:0
-                        padding: 4
                         size_hint:1,1
-                        #size: "200dp", "100dp"
-                        md_bg_color:"white"
-                        pos_hint: {"center_x": .5, "center_y": .5}
-                        adaptive_size: True
-
-                        MDRaisedButton:
-                            size_hint:1,1
-                            on_press:app.dialog_open()
-
-
-                    MDCard:
-                        elevation:0
-                        padding: 4
-                        size_hint:1,1
-                        #size: "200dp", "100dp"
-                        md_bg_color:"white"
-                        pos_hint: {"center_x": .5, "center_y": .5}
-                        adaptive_size: True
-
-                        MDRaisedButton:
-                            size_hint:1,1
-                            on_press:app.dialog_open()
-
-
-                    MDCard:
-                        elevation:0
-                        padding: 4
-                        size_hint:1,1
-                        #size: "200dp", "100dp"
-                        md_bg_color:"white"
-                        pos_hint: {"center_x": .5, "center_y": .5}
-                        adaptive_size: True
-
-                        MDRaisedButton:
-                            size_hint:1,1
-                            on_press:app.dialog_open()
+                        on_press:app.dialog_open()
 
                         
-                    MDCard:
+                    
+
+                    MDRaisedButton:
                         elevation:0
-                        padding: 4
                         size_hint:1,1
-                        #size: "200dp", "100dp"
-                        md_bg_color:"white"
-                        pos_hint: {"center_x": .5, "center_y": .5}
-                        adaptive_size: True
-
-                        MDRaisedButton:
-                            size_hint:1,1
-                            on_press:app.dialog_open()
+                        on_press:app.dialog_open()
 
 
-                    MDCard:
+                    
+
+                    MDRaisedButton:
                         elevation:0
-                        padding: 4
                         size_hint:1,1
-                        #size: "200dp", "100dp"
-                        md_bg_color:"white"
-                        pos_hint: {"center_x": .5, "center_y": .5}
-                        adaptive_size: True
-
-                        MDRaisedButton:
-                            size_hint:1,1
-                            on_press:app.dialog_open()
+                        on_press:app.dialog_open()
 
     MDScreen:  #screen b
         name: "screen B"
