@@ -15,7 +15,7 @@ from kivy.properties import StringProperty
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.button import MDFlatButton
 
-Window.size=(dp(440),dp(600))
+#Window.size=(dp(440),dp(600))
 
 #Builder.load_file("mymd.kv")
 
@@ -46,7 +46,7 @@ class Test(MDApp):
             #print(self.path)
             self.file=open(self.path,"r",encoding="ISO-8859-1")
             self.missal=self.file.read()
-            self.root.ids.Missal.text=self.missal
+            self.root.ids.Missal.text= self.path  #self.missal
             #print(self.missal)
             self.file.close()
             #print(missal)
