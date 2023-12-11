@@ -20,7 +20,7 @@ source.include_exts = missal/*.txt
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
 #source.include_patterns = app_missal/*.png
-source.include_patterns = missal/*.txt
+#source.include_patterns = missal/*.txt
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
